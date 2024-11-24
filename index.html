@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/16b7d478bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/SAHIL_logo(aa).png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">home</a> </li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#portfolio">Portfolio</a> </li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark unique" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars unique" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p><span>Web</span> Developer</p>
+                <h1>Hi, I'am <span>Sahil</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!----------------about--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Pasted Graphic.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><span>About me</span></h1>
+                    <p>I am a skilled Web Developer with expertise in Node.js,
+                        Express.js, PostgreSQL, JavaScript, HTML, and CSS.
+                        I combine my technical knowledge with creative problem-solving
+                        to build efficient and innovative web solutions. Additionally,
+                        I hold an Azure AZ-900 certification, reflecting my proficiency
+                        in cloud computing and modern IT practices.
+                    </p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><i class="fa-brands fa-html5"></i> HTML</li>
+                            <li><i class="fa-brands fa-css"></i> CSS</li>
+                            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                            <li><i class="fa-brands fa-node"></i> Node</li>
+                            <li><i class="fa-solid fa-code"></i> Express.js</li>
+                            <li><i class="fa-solid fa-database"></i> Postgres</li>
+                            <li><i class="fa-solid fa-cloud"></i> Azure</li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-link" id="education">
+                        <ul>
+                            <li><span>2021-2024  </span> B.tech in Information Science. Gogte Institute of Technology</li>
+                            <li><span>2017-2021  </span> Diploma in Computer Science From Vasantrao Potdar Polytechnic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------------------portfolio----------------->
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title"><span>My work</span></h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="images/work-1.png">
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>The app connects you to the talented people arount the world.
+                    Download it from play store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-2.png">
+            <div class="layer">
+                <h3>Music App</h3>
+                <p>The app connects you to the talented people arount the world.
+                    Download it from play store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-3.png">
+            <div class="layer">
+                <h3>Online Shopping App</h3>
+                <p>The app connects you to the talented people arount the world.
+                    Download it from play store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!------------------contact------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"><span>Contact Me</span></h1>
+                <P> <i class="fa-solid fa-envelope"></i> dev.Sahiljaha@gmail.com</P>
+                <p> <i class="fa-solid fa-phone"></i> 7259110152</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download  class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright <i class="fa-solid fa-heart"></i> © 2024 </p>
+    </div>
+</div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWoCMqOXvEKNN7udoj_G_UIo36rTHiFBZ8V71n7tdJaopIn8-ZLnnQUSxOEXi8nKqpA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message send Sucessfully!!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
